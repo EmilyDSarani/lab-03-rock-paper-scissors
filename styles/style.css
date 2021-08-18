@@ -1,11 +1,11 @@
 
 body {
     /* https://coolors.co/generate and click export -> scss to get the colors to copy and paste below*/
-    /* --color1: hsla(349, 69%, 76%, 1);
-    --color2: hsla(207, 67%, 44%, 1);
-    --color3: hsla(200, 61%, 56%, 1);
-    --color4: hsla(187, 41%, 94%, 1);
-    --color5: hsla(170, 28%, 95%, 1); */
+    --color1: rgb(161, 161, 161);
+    --color2: rgb(152, 152, 153);
+    --color3: rgb(6, 60, 87);
+    --color4: rgb(0, 232, 253);
+    --color5: rgb(252, 214, 214); */
 
     /* --color1: hsla(45, 86%, 83%, 1);
     --color2: hsla(135, 65%, 98%, 1);
@@ -71,7 +71,7 @@ h2 {
 }
 
 .main-logo {
-    animation: pulse 5s infinite ease-in-out;
+   
 }
 
 header img {
@@ -111,3 +111,41 @@ footer {
     }
 
   }
+.picture{
+    width: 90%;
+    height: auto;
+    cursor:pointer;
+    
+}
+input:checked {
+    transform: scale(1);
+    cursor:pointer;
+}
+
+input[type="radio"] {
+    display: none;
+    
+}
+
+input:checked + img {
+    border: solid 10px rgb(79, 128, 235);
+    border-radius: 15px;
+}
+
+.pressgo{
+    background-color: hsl(165, 100%, 50%);
+     color:rgb(99, 99, 99) 100px;
+     border-radius: 10px;
+     cursor:pointer;
+     box-shadow: rgb(5, 255, 109);
+     transition: all .2s ease-in-out;
+
+}
+.reset{
+    background-color: hsl(51, 87%, 78%);
+     color:rgb(255, 255, 255) 100px;
+     border-radius: 10px;
+     cursor:pointer;
+     box-shadow: burlywood;
+     transition: all .2s ease-in-out;
+}
