@@ -8,6 +8,12 @@ const winorloseEl = document.getElementById('win-lose');
 const winwinEl = document.getElementById ('wins');
 const loseloseEl = document.getElementById ('losses');
 
+let wins = 0;
+let losses = 0;
+let computerToss = null;
+
+goButtonEl..addEventListener('click', () => {
+  
 // initialize global state
 
 // set event listeners 
