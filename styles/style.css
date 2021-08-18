@@ -71,7 +71,7 @@ h2 {
 }
 
 .main-logo {
-    animation: pulse 5s infinite ease-in-out;
+   
 }
 
 header img {
@@ -111,3 +111,37 @@ footer {
     }
 
   }
+.picture{
+    width: 90%;
+    height: auto;
+    
+}
+input:checked {
+    transform: scale(2);
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input:checked + img {
+    border: solid 10px rgb(79, 128, 235);
+    border-radius: 15px;
+}
+.pressgo{
+    background-color: hsl(165, 100%, 50%);
+     color:rgb(99, 99, 99) 100px;
+     border-radius: 10px;
+     cursor:pointer;
+     box-shadow: rgb(5, 255, 109);
+     transition: all .2s ease-in-out;
+
+}
+.reset{
+    background-color: hsl(305, 100%, 85%);
+     color:rgb(255, 255, 255) 100px;
+     border-radius: 10px;
+     cursor:pointer;
+     box-shadow: burlywood;
+     transition: all .2s ease-in-out;
+}
