@@ -1,5 +1,13 @@
 // import functions and grab DOM elements
 
+const goButtonEl = document.getElementById ('pressgo');
+const resetButtonEl = document.getElementById ('reset');
+const userChoiceEl = document.getElementById('user-Choice');
+const computerChoiceEl = document.getElementById('computer-Choice');
+const winorloseEl = document.getElementById('win-lose');
+const winwinEl = document.getElementById ('wins');
+const loseloseEl = document.getElementById ('losses');
+
 // initialize global state
 
 // set event listeners 
