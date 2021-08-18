@@ -1,4 +1,5 @@
 // import functions and grab DOM elements
+import { RPS } from './rps.js';
 
 const goButtonEl = document.getElementById ('pressgo');
 const resetButtonEl = document.getElementById ('reset');
@@ -12,6 +13,12 @@ let wins = 0;
 let losses = 0;
 let computerToss = null;
 
+goButtonEl.addEventListener('click',() => {
+    const threeThrow = RPS();
+
+}
+
+)
 
 // set event listeners 
   // get user input
