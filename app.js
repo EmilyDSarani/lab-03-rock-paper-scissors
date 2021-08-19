@@ -27,6 +27,7 @@ goButtonEl.addEventListener('click', () => {
 
     winwinEl.textContent = `Winner: ${wins}`;
     loseloseEl.textContent = `Loser: ${losses}`;
+
     console.log(winnerwinner);
 });
 

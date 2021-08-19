@@ -8,15 +8,10 @@ export function rockpaperscissor(){
 }
 
 export function didUserWin(userThrow, actualThrow) {
-    if (userThrow === actualThrow) return 'draw';
-
-    if (userThrow === 'paper' && actualThrow === 'rock')
-
-        if (userThrow === 'rock' && actualThrow === 'scissors')
-
-            if (userThrow === 'scissors' && actualThrow === 'paper')
-                return 'winner';  
-            else {
-                return 'loser';
-            }
+    if (userThrow === actualThrow) {
+        return 'draw';}
+    if ((userThrow === 'paper' && actualThrow === 'rock') || (userThrow === 'rock' && actualThrow === 'scissors') || (userThrow === 'scissors' && actualThrow === 'paper'))
+    { return 'winner';  
+     
+    } else { return 'LOSER';}
 }
