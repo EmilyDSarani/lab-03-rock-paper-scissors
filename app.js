@@ -8,31 +8,28 @@ const userChoiceEl = document.getElementById('user-Choice');
 const compChoiceEl = document.getElementById('computer-Choice');
 const winorloseEl = document.getElementById('win-lose');
 const winwinEl = document.getElementById ('wins');
-const loseloseEl = document.getElementById ('losses');
+const loseloseEl = document.getElementById ('lose');
 
 let wins = 0;
 let losses = 0;
-
 goButtonEl.addEventListener('click', () => {
   
-    const threeThrow = rockpaperscissor();
+    const compChoice = rockpaperscissor();
     const selectorEl = document.querySelector('input:checked');
     
-    const winnerwinner = didUserWin (selectorEl.value, threeThrow);
+    const winnerwinner = didUserWin (selectorEl, compChoice);
 
     if (winnerwinner) {
-        wins++;
         winorloseEl.textContent = 'Winner Winner, Chicken Dinner!';
     } else {
-        losses++;
         winorloseEl.textContent = 'Loser Loser, No good Rhyme!';
     }
 
-    winwinEl.textContent = `Wins: ${wins}`;
-    loseloseEl.textContent = `Losses: ${losses}`;
+    winwinEl.textContent = `Winner: ${wins}`;
+    loseloseEl.textContent = `Loser: ${losses}`;
+
 });
 
-console.log(yourguess);
 
 resetButtonEl.addEventListener('click', () => {
     location.reload();
