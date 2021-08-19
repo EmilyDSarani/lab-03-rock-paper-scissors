@@ -1,27 +1,22 @@
-const sideArray = ['rock', 'paper', 'scissors'];
 
 export function rockpaperscissor(){
-
     const compHand = Math.round(Math.random() * 2);
-    return sideArray[compHand];
+    if (compHand === 0) return 'rock';
+    if (compHand === 1) return 'paper';
+    if (compHand === 2) return 'scissors';
     
 }
 
 export function didUserWin(userThrow, actualThrow) {
+    if (userThrow === actualThrow) return 'draw';
 
-    if (userThrow === 'rock' && actualThrow === 'paper'){
-        return actualThrow; 
-    } else if (userThrow === 'paper' && actualThrow === 'rock'){
-        return userThrow;
-    } else if (userThrow === 'rock' && actualThrow === 'scissors'){
-        return userThrow;
-    } if (userThrow === 'scissors' && actualThrow === 'rock'){
-        return actualThrow; 
-    } else if (userThrow === 'paper' && actualThrow === 'scissors'){
-        return actualThrow;
-    } else if (userThrow === 'scissors' && actualThrow === 'paper'){
-        return userThrow;
-    } else {
-        return userThrow === actualThrow;
-    }
+    if (userThrow === 'paper' && actualThrow === 'rock')
+
+        if (userThrow === 'rock' && actualThrow === 'scissors')
+
+            if (userThrow === 'scissors' && actualThrow === 'paper')
+                return 'winner';  
+            else {
+                return 'loser';
+            }
 }
