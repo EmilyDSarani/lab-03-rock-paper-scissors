@@ -1,6 +1,5 @@
 // IMPORT MODULES under test here:
 import { getComputerThrow } from './rps.js';
-import { didUserWin } from '../rps.js';
 
 const test = QUnit.test;
 
