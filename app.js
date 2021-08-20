@@ -1,14 +1,14 @@
 // import functions and grab DOM elements
-import { rockpaperscissor } from './rps.js';
+import { getComputerThrow } from './rps.js';
 import { didUserWin } from './rps.js';
 
-const yourthrow = document.getElementById ('user-choice');
-const digitalthrow = document.getElementById ('computer-choice');
-const goButtonEl = document.getElementById ('pressgo');
+//const yourThrow = document.getElementById ('user-choice');
+//const digitalThrow = document.getElementById ('computer-choice');
+const goButtonEl = document.getElementById ('press-go');
 const resetButtonEl = document.getElementById ('reset');
-const winorloseEl = document.getElementById('win-lose');
-const winwinEl = document.getElementById ('wins');
-const loseloseEl = document.getElementById ('lose');
+const winOrLoseEl = document.getElementById('win-lose');
+const winWinEl = document.getElementById ('wins');
+const loseLoseEl = document.getElementById ('lose');
 const drawDrawEl = document.getElementById ('draw');
 
 // eslint-disable-next-line no-unused-vars
@@ -21,25 +21,25 @@ let losses = 0;
 goButtonEl.addEventListener('click', () => {
    
   
-    const computerChoice = rockpaperscissor();
+    const computerChoice = getComputerThrow();
     const selectorEl = document.querySelector('input:checked');
   
     
-    const whoWon = didUserWin (computerChoice, selectorEl);
+    const whoWon = didUserWin(selectorEl.value, computerChoice);
 
     if (whoWon === 'wins') {
         wins++;
-        winorloseEl.textContent = 'Winner Winner, Chicken Dinner!';
+        winOrLoseEl.textContent = 'Winner Winner, Chicken Dinner!';
     } else if (whoWon === 'losses') {
         losses++;
-        winorloseEl.textContent = 'Loser Loser, No good Rhyme!';
+        winOrLoseEl.textContent = 'Loser Loser, No good Rhyme!';
     } else if (whoWon === 'draws'){
         draws++;
-        winorloseEl.textContent = 'Issa draaaaw';
+        winOrLoseEl.textContent = 'Issa draaaaw';
     }
-
-    winwinEl.textContent = `Winner: ${wins}`;
-    loseloseEl.textContent = `Loser: ${losses}`;
+    
+    winWinEl.textContent = `Winner: ${wins}`;
+    loseLoseEl.textContent = `Loser: ${losses}`;
     drawDrawEl.textContent = `Draws: ${draws}`;
 
 });
