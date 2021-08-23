@@ -39,7 +39,7 @@ test('when the user throws rock and computer throws scissor then it will be a wi
     
     //Act 
     // Call the function you're testing and set the result to a const
-    const actual = didUserWin('rock', 'scissor');
+    const actual = didUserWin('rock', 'scissors');
 
     //Expect
     // Make assertions about what is expected versus the actual result
